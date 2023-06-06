@@ -1,37 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-  body {
-    font-family: sans-serif;
-  }
-  label {
-    display: block;
-    margin-bottom: .2em;
-  }
-</style>
+	<meta charset="UTF-8">
+	<meta name="description" content="A simple form that is integrated with netlify">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="author" content="Lawson Ezekiel">
+	<link rel="stylesheet" href="https://unpkg.com/tailwindcss/dist/tailwind.min.css">
+	<link rel="stylesheet" href="css/style.css">
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
+	<title>Netlify___Form</title>
 </head>
+
 <body>
-    <form name="contact" netlify method="POST" data-netlify="true">
-    <p>
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" />
-    </p>
-    <p>
-      <label for="email">Email</label>
-      <input type="text" id="email" name="email" />
-    </p>
-    <p>
-      <label for="message">Message</label>
-      <textarea id="message" name="message"></textarea>
-    </p>
-    <p>
-      <button type="submit">Send</button>
-    </p>
-  </form>
+	<form name="contact" netlify method="POST" data-netlify="true">
+
+		<p class="form-row">
+			<label id="contact-form-name-label" for="contact-form-name" class="form-label">Name</label>
+			<input type="text" name="name" id="contact-form-name" aria-labelledby="contact-form-name-label"
+				class="form-input" />
+		</p>
+		<p class="form-row">
+			<label id="contact-form-email-label" for="contact-form-email" class="form-label">Email address</label>
+			<input type="email" name="email" id="contact-form-email" aria-labelledby="contact-form-email-label"
+				class="form-input" />
+		</p>
+		<p class="form-row">
+			<label id="contact-form-message-label" for="contact-form-message" class="form-label">Message</label>
+			<textarea name="message" id="contact-form-message" aria-labelledby="contact-form-message-label"
+				class="form-textarea" rows="7"></textarea>
+		</p>
+		<p class="form-row form-submit">
+			<button type="submit" class="button">Send Message</button>
+		</p>
+	</form>
+
 </body>
+
 </html>
